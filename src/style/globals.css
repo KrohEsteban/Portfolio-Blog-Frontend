@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #272b30;
+    --secondary: #3A3F44;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--primary);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border: 3px solid var(--primary);
+  }
+
+  h1 {
+    @apply text-center text-3xl sm:text-4xl lg:text-5xl
+  }
+
+  h2 {
+    @apply  text-center text-3xl sm:text-4xl lg:text-5xl
+  }
+
+  h3 {
+    @apply text-center text-2xl sm:text-3xl lg:text-4xl
+  }
+
+  h4 {
+    @apply text-center text-xl sm:text-2xl lg:text-3xl
+  }
+
+  h5,
+  h6 {
+    @apply text-center text-lg sm:text-xl lg:text-2xl
+  }
+  a{
+    @apply text-naranja
+  }
+}
+
+@layer components {}
+
+@layer utilities {
+  .toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+  }
+
+  .brillosize {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    
+  }
+
+  .sinbrillo {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    display: block;
+    padding: 25px 10px;
+    border-radius: 6px;
+  }
+
+  .brillo {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+  .brillo:after,
+  .brillo:before {
+    width: 80px;
+    height: 300%;
+    content: '';
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    top: -100%;
+    position: absolute;
+    transition: none;
+  
+
+  }
+
+  .brillo:before {
+    left: -500px;
+    animation: animacionbuttonbefore 2s linear 1;
+    
+  }
+
+  @keyframes animacionbuttonbefore {
+    to {
+      left: 1500px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .brillo:after {
+    right: -500px;
+    animation: animacionbuttonafter 2s linear 1;
+
+  }
+
+  @keyframes animacionbuttonafter {
+    to {
+      right: 1500px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+/* 
+  .brillo:hover {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .brillo:hover:after,
+  .brillo:hover:before {
+    transform: rotate(45deg), scaleX(130%);
+    background: rgba(255, 255, 255, 0.1);
+    transition: all ease 3s;
+  }
+
+  .brillo:hover:after {
+    right: 1500px;
+  }
+
+  .brillo:hover:before {
+    left: 1500px;
+  } */
+
+
+
+  .handwriting {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px;
+    transition: all 1s ease;
+    transition-delay: 1s;
+
+  }
+
+  .handwriting ::shadow ::after ::before {
+    stroke: #d4d3d3 !important;
+    color-scheme: #d4d3d3 !important;
+    color: #d4d3d3 !important;
+  }
+
+  .handwriting svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .handwriting svg .texto {
+    stroke-dasharray: 9000;
+    stroke-dashoffset: 9000;
+    animation: animacion 7s linear 1 forwards;
+  }
+
+  @keyframes animacion {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animacionopacidad {
+    opacity: 0;
+    animation: animacionopacity 4s linear 1 forwards;
+  }
+
+  @keyframes animacionopacity {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+}
