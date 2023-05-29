@@ -6,14 +6,14 @@ type Props = {
   params: { slug: string };
 };
 
-export async function getData( slug: string ) {
+async function getData( slug: string ) {
 
     const data= await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog?where[Slug][equals]=' + slug, { next: { revalidate: 10 } }).then((res) => res.json());
     return data.docs[0]
 
 }
 
-export async function getContactos(){
+async function getContactos(){
     return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
   }
 

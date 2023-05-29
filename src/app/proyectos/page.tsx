@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export async function getData() {
+async function getData() {
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679bb365efdb4becb2b9fe', { next: { revalidate: 10 } }).then((res) => res.json());
 
 }
-export async function getProyectos() {
+async function getProyectos() {
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/proyectos', { next: { revalidate: 10 } }).then((res) => res.json());
 
 }

@@ -3,11 +3,11 @@ import { Metadata, ResolvingMetadata } from 'next';
 import Bloques from '@/components/Bloques';
 
 
-export async function getData(){
+async function getData(){
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/646795d7aa702068d833159e', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 
-export async function getContactos(){
+async function getContactos(){
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 

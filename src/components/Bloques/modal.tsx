@@ -4,7 +4,7 @@ import RichText from "./richtextnormal";
 import RichTextModal from "./richtextmodal";
 
   
-export default function Modal (props:{children:Array<Object>}):any {
+export default function Modal (props:{children:any}):any {
 
     const [ ref, inView, entry ] = useInView({
         /* Optional options */
@@ -15,11 +15,15 @@ export default function Modal (props:{children:Array<Object>}):any {
         <div className="py-6">
         {inView ? (
             <div ref={ref} className="w-11/12 border p-4 border-gris-claro bg-gris-intermedio text-center brillo">
-                <RichTextModal children={props.children} />
+                <RichTextModal>
+                {props.children}
+                </RichTextModal>
             </div> 
           ) : (
             <div ref={ref} className="w-11/12 border p-4  border-gris-claro bg-gris-intermedio text-center sinbrillos">
-                <RichTextModal children={props.children} />
+                <RichTextModal>
+                {props.children}
+                </RichTextModal>
             </div> 
           )}
         </div>

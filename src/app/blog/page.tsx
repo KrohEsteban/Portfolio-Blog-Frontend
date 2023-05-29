@@ -2,16 +2,16 @@ import Bloques from '@/components/Bloques';
 import Post from '@/components/posts';
 import { Metadata } from 'next';
 
-export async function getData() {
+async function getData() {
 
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679c9e65efdb4becb2ba48', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 
-export async function getEtiquetas() {
+async function getEtiquetas() {
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/etiquetas', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 
-export async function getBlogs() {
+async function getBlogs() {
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 

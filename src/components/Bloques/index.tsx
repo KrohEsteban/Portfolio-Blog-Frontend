@@ -4,7 +4,7 @@ import Modal from "./modal";
 import Carousel from "./carousel";
 
   
-export default function Bloques (children:Array<Object>):any {
+export default function Bloques (children:any):any {
 
     
     if (!children) {
@@ -19,7 +19,9 @@ export default function Bloques (children:Array<Object>):any {
 
             return(
                 <Fragment key={i}>
-                     <RichTextNormal children={node.RichTextNormal} />
+                     <RichTextNormal>
+                        {node.RichTextNormal}
+                     </RichTextNormal>
                 </Fragment> 
             )
 
@@ -27,7 +29,9 @@ export default function Bloques (children:Array<Object>):any {
 
             return (
             <Fragment key={i}>
-                <Modal children={node.Modal} />
+                <Modal>
+                {node.Modal}
+                </Modal>
             </Fragment> 
         )
 
@@ -35,7 +39,9 @@ export default function Bloques (children:Array<Object>):any {
 
             return(
                 <Fragment key={i}>
-                    <Carousel children={node.Carousel} />
+                    <Carousel>
+                    {node.Carousel}
+                    </Carousel>
                 </Fragment> 
             )
 

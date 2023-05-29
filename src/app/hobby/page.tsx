@@ -4,7 +4,7 @@ import RichText from '@/components/Bloques/richtextnormal';
 import { Metadata, ResolvingMetadata } from 'next';
 
 
-export async function getData(){
+async function getData(){
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/pages/64679c1b65efdb4becb2ba21', {next: { revalidate: 10 }}).then((res) => res.json());
 
 }

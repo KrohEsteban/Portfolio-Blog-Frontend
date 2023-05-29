@@ -6,7 +6,7 @@ import Serializar from './serializar';
 
 
   
-export default function RichTextModal (props:{children:Array<Object>}):any {
+export default function RichTextModal (props:{children:any}):any {
   
   if (!props.children) {
   
@@ -30,7 +30,9 @@ return props.children.map((node:any, i:number) => {
   
     return(
       <Fragment key={i}>
-        <Serializar children={node} />
+        <Serializar>
+        {node} 
+        </Serializar>
       </Fragment>
       
     )
@@ -45,7 +47,9 @@ switch (node.type) {
     case 'h1': {
       return (
         <h1 key={i} className='p-3'>
-          <RichTextModal children={node.children} />
+          <RichTextModal>
+          {node.children} 
+          </RichTextModal>
         </h1>
       )
     }
@@ -53,7 +57,9 @@ switch (node.type) {
     case 'h2': {
       return (
         <h2 key={i} className='p-3'>
-         <RichTextModal children={node.children} />
+         <RichTextModal>
+           {node.children}
+         </RichTextModal>
         </h2>
       )
     }
@@ -61,7 +67,9 @@ switch (node.type) {
     case 'h3': {
       return (
         <h3 key={i} className='p-3'>
-        <RichTextModal children={node.children} />
+        <RichTextModal>
+           {node.children}
+        </RichTextModal>
         </h3>
       )
     }
@@ -69,7 +77,9 @@ switch (node.type) {
     case 'h4': {
       return (
         <h4  key={i} className='p-3'>
-         <RichTextModal children={node.children} />
+         <RichTextModal>
+           {node.children}
+         </RichTextModal>
         </h4>
       )
     }
@@ -77,7 +87,9 @@ switch (node.type) {
     case 'h5': {
       return (
         <h5 key={i} className='p-3'>
-         <RichTextModal children={node.children} />
+         <RichTextModal>
+          {node.children}
+         </RichTextModal>
         </h5>
       )
     }
@@ -85,7 +97,9 @@ switch (node.type) {
     case 'h6': {
       return (
         <h6 key={i} className='p-3'>
-         <RichTextModal children={node.children} />
+         <RichTextModal>
+           {node.children}
+         </RichTextModal>
         </h6>
       )
     }
@@ -93,7 +107,9 @@ switch (node.type) {
     case 'blockquote': {
       return (
         <h4 key={i} className=' p-5 m-auto text-center font-kaushanscript '>
-        <RichTextModal children={node.children} />
+        <RichTextModal>
+           {node.children}
+        </RichTextModal>
         </h4>
       )
     }
@@ -102,14 +118,18 @@ switch (node.type) {
       if(node.linkType==='internal'){
         return (
           <Link key={i} href={(typeof node.doc?.value?.Slug !== 'undefined')?node.doc?.value?.Slug:((typeof node.doc?.value?.Url !== 'undefined')?node.doc?.value?.Url:'#')}>
-            <RichTextModal children={node.children} />
+            <RichTextModal>
+               {node.children}
+            </RichTextModal>
           </Link>
         )
       }else{
       
         return (
           <Link key={i} href={(typeof node.url !== 'undefined')?node.url:'#'}>
-          <RichTextModal children={node.children} />
+          <RichTextModal>
+             {node.children}
+          </RichTextModal>
           </Link>
         )
       }
@@ -120,7 +140,9 @@ switch (node.type) {
     case 'ol': {
       return (
         <ol key={i} className='list-decimal pl-8 py-5'>
-         <RichTextModal children={node.children} />
+         <RichTextModal>
+           {node.children}
+         </RichTextModal>
         </ol>
       )
     }
@@ -128,7 +150,9 @@ switch (node.type) {
     case 'ul': {
       return (
         <ul key={i} className='list-disc pl-8 py-5'>
-       <RichTextModal children={node.children} />
+       <RichTextModal>
+         {node.children}
+       </RichTextModal>
         </ul>
       )
     }
@@ -136,7 +160,9 @@ switch (node.type) {
     case 'li': {
       return (
         <li key={i} >
-       <RichTextModal children={node.children} />
+       <RichTextModal>
+         {node.children}
+       </RichTextModal>
         </li>
       )
     }
@@ -144,7 +170,9 @@ switch (node.type) {
     default:
       return (
         <p key={i}>
-       <RichTextModal children={node.children} />
+       <RichTextModal>
+         {node.children}
+       </RichTextModal>
         </p> 
       )
 

@@ -8,7 +8,7 @@ const DancingScript = Dancing_Script({subsets: ['latin'],  weight: '700', variab
 const OpenSans = Open_Sans({subsets: ['latin'],  weight: '400', variable: '--font-OpenSans'})
 const KaushanScript = Kaushan_Script({subsets: ['latin'], weight: '400', variable: '--font-KaushanScript'})
 
-export async function getContactos(){
+async function getContactos(){
   return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 

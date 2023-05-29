@@ -6,7 +6,7 @@ import Serializar from './serializar';
 
 
   
-export default function RichTextNormal (props:{children:Array<Object>}):any {
+export default function RichTextNormal (props:{children:any}):any {
   
   if (!props.children) {
   
@@ -30,7 +30,9 @@ return props.children.map((node:any, i:number) => {
   
     return(
       <Fragment key={i}>
-        <Serializar children={node} />
+        <Serializar>
+        {node}
+        </Serializar>
       </Fragment>
       
     )
@@ -45,7 +47,9 @@ switch (node.type) {
     case 'h1': {
       return (
         <h1 key={i} className='py-20'>
-          <RichTextNormal children={node.children} />
+          <RichTextNormal>
+             {node.children}
+          </RichTextNormal>
         </h1>
       )
     }
@@ -53,7 +57,9 @@ switch (node.type) {
     case 'h2': {
       return (
         <h2 key={i} className='py-20'>
-         <RichTextNormal children={node.children} />
+         <RichTextNormal>
+           {node.children}
+         </RichTextNormal>
         </h2>
       )
     }
@@ -61,7 +67,9 @@ switch (node.type) {
     case 'h3': {
       return (
         <h3 key={i} className='py-20'>
-        <RichTextNormal children={node.children} />
+        <RichTextNormal>
+           {node.children}
+        </RichTextNormal>
         </h3>
       )
     }
@@ -69,7 +77,9 @@ switch (node.type) {
     case 'h4': {
       return (
         <h4  key={i} className='py-20'>
-         <RichTextNormal children={node.children} />
+         <RichTextNormal>
+           {node.children}
+         </RichTextNormal>
         </h4>
       )
     }
@@ -77,7 +87,9 @@ switch (node.type) {
     case 'h5': {
       return (
         <h5 key={i} className='py-20'>
-         <RichTextNormal children={node.children} />
+         <RichTextNormal>
+           {node.children}
+         </RichTextNormal>
         </h5>
       )
     }
@@ -85,7 +97,9 @@ switch (node.type) {
     case 'h6': {
       return (
         <h6 key={i} className='py-20'>
-         <RichTextNormal children={node.children} />
+         <RichTextNormal>
+           {node.children}
+         </RichTextNormal>
         </h6>
       )
     }
@@ -93,7 +107,9 @@ switch (node.type) {
     case 'blockquote': {
       return (
         <h4 key={i} className=' py-20 px-10 m-auto text-center font-kaushanscript '>
-        <RichTextNormal children={node.children} />
+        <RichTextNormal>
+           {node.children}
+        </RichTextNormal>
         </h4>
       )
     }
@@ -102,14 +118,18 @@ switch (node.type) {
       if(node.linkType==='internal'){
         return (
           <Link key={i} href={(typeof node.doc?.value?.Slug !== 'undefined')?node.doc?.value?.Slug:((typeof node.doc?.value?.Url !== 'undefined')?node.doc?.value?.Url:'#')}>
-            <RichTextNormal children={node.children} />
+            <RichTextNormal>
+               {node.children}
+            </RichTextNormal>
           </Link>
         )
       }else{
       
         return (
           <Link key={i} href={(typeof node.url !== 'undefined')?node.url:'#'}>
-          <RichTextNormal children={node.children} />
+          <RichTextNormal>
+             {node.children}
+          </RichTextNormal>
           </Link>
         )
       }
@@ -119,7 +139,9 @@ switch (node.type) {
     case 'indent': {
       return (
         <div key={i} className='py-10 px-3 ms:p-10'>
-        <RichTextNormal children={node.children} />
+        <RichTextNormal>
+           {node.children}
+        </RichTextNormal>
         </div>
       )
     }
@@ -127,7 +149,9 @@ switch (node.type) {
     case 'ol': {
       return (
         <ol key={i} className='list-decimal pl-8 py-5'>
-         <RichTextNormal children={node.children} />
+         <RichTextNormal>
+           {node.children}
+         </RichTextNormal>
         </ol>
       )
     }
@@ -135,7 +159,9 @@ switch (node.type) {
     case 'ul': {
       return (
         <ul key={i} className='list-disc pl-8 py-5'>
-       <RichTextNormal children={node.children} />
+       <RichTextNormal>
+         {node.children}
+       </RichTextNormal>
         </ul>
       )
     }
@@ -143,7 +169,9 @@ switch (node.type) {
     case 'li': {
       return (
         <li key={i} >
-          <RichTextNormal children={node.children} />
+          <RichTextNormal>
+             {node.children}
+          </RichTextNormal>
         </li>
       )
     }
@@ -159,7 +187,9 @@ switch (node.type) {
          
             className='object-cover m-auto'
           />
-          <RichTextNormal children={node.children} />
+          <RichTextNormal>
+             {node.children}
+          </RichTextNormal>
         </div>
       )
     }
@@ -167,7 +197,9 @@ switch (node.type) {
     default:
       return (
         <p key={i} className='p-2 text-justify'>
-       <RichTextNormal children={node.children} />
+       <RichTextNormal>
+         {node.children}
+       </RichTextNormal>
         </p> 
       )
 
