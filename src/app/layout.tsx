@@ -35,7 +35,7 @@ export const metadata = {
     },
   },
 
-  manifest: 'http://localhost:3000/manifest.json',
+  manifest: '/manifest.json',
   // alternates: {
   //   canonical: './',
   //   languages: {
