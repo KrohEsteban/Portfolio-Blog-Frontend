@@ -29,13 +29,13 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
 
             <div className='my-20'>
                 <h5 className='text-start p-3'>Posts:</h5>
-                <div className='grid grid-cols-2 py-5'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 py-5'>
                     {
                         props.blogs.docs.map((item: any, i: number) => {
 
                             if (select === '') {
                                 return (
-                                    <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 border-l-2 border-naranja text-gris-claro' >
+                                    <Link key={i} href={`/blog/${item.Slug}`} className='space-ym-3 p-5 m-3 border-l-2 border-naranja text-gris-claro' >
                                         <h4 className='text-start'>{item.Title}</h4>
                                         <p className='text-start'>{item.Description}</p>
                                     </Link>
