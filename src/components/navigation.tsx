@@ -20,7 +20,7 @@ export default function Navigation(props: { contactos: any }) {
                 <nav className='md:flex md:justify-around relative'>
                     <div className='flex items-center justify-around'>
                         <Link className="text-4xl text-inherit" href='/'><span className='font-dancingscript'>Esteban Kroh</span></Link>
-                        <button className="flex justify-center h-10 w-10 md:hidden aria-expanded:toggle-btn"
+                        <button className="flex justify-center h-10 w-10 md:hidden aria-expanded:toggle-btn" aria-label="Menu"
                             type="button" data-collapse-toggle="menu" aria-controls="menu" aria-expanded={menu}
                             onClick={() => {
                                 setEntro(true),
@@ -58,7 +58,7 @@ export default function Navigation(props: { contactos: any }) {
                                 {
                                     props.contactos.docs.map((item: { Nombre: string, Url: string, Svg: string }) => {
                                         return <li className='w-10 sm:w-11 md:w-12' key={item.Nombre}>
-                                            <a className='stroke-none text-gris-claro p-4 m-auto' href={item.Url} target="_blank" rel="noopener noreferrer">{<div dangerouslySetInnerHTML={{ __html: item.Svg }} />}<p className="hidden">{item.Nombre}</p></a>
+                                            <a className='stroke-none text-gris-claro p-4 m-auto' href={item.Url} target="_blank" rel="noopener noreferrer" aria-label={item.Nombre}>{<div dangerouslySetInnerHTML={{ __html: item.Svg }} />}</a>
                                         </li>
                                     })
                                 }

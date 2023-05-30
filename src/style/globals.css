@@ -49,7 +49,7 @@
     @apply text-center text-lg sm:text-xl lg:text-2xl
   }
   a{
-    @apply text-naranja
+    @apply text-naranja font-medium
   }
 }
 

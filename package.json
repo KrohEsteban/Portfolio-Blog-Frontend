@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
+    "@ducanh2912/next-pwa": "^8.5.1",
     "@types/escape-html": "^1.0.2",
     "@types/node": "18.16.2",
     "@types/react": "18.2.0",

@@ -10,7 +10,7 @@ module.exports = {
         'gris-claro': '#d4d3d3',
         'gris-oscuro': '#272b30',
         'gris-intermedio': '#3A3F44',
-        'naranja': '#b85b22',
+        'naranja': '#df5e3a',
       },
       fontFamily: {
         dancingscript: ['var(--font-DancingScript)'],

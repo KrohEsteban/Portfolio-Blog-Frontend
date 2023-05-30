@@ -1,0 +1,36 @@
+{
+    "short_name": "E.K.",
+    "name": "E.K.: Esteban Kroh, programador web",
+    "icons": [
+      {
+        "src": "/favicon.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/icon-192",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#272b30",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#df5e3a",
+    "description": "Soy Esteban Kroh, programador web de Santa Rosa, La Pampa. Informático por vocación y emprendedor por naturaleza, contáctame para completar tus proyectos!",
+    "screenshots": [
+      {
+        "src": "/perfil.jpeg",
+        "type": "image/png",
+        "sizes": "1279x1917"
+      }
+     
+    ]
+  }
