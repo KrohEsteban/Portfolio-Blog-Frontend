@@ -13,7 +13,7 @@ module.exports = {
         'naranja': '#df5e3a',
       },
       fontFamily: {
-        dancingscript: ['Dancing Script'],
+        dancingscript: ['var(--font-DancingScript)'],
         opensans: ['var(--font-OpenSans)'],
         kaushanscript: ['var(--font-KaushanScript)'],
       },

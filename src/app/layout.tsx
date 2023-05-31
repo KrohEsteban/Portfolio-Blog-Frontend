@@ -80,16 +80,7 @@ export default async function RootLayout({
   
   return (
     <html lang="es" className={`${OpenSans.variable} ${DancingScript.variable} ${KaushanScript.variable}`}>
-        <head>
-        <link
-          rel="preload"
-          href="/DancingScript.ttf"
-          as="font"
-          crossOrigin="anonymous"
-          type="font/ttf"
-          
-        />
-      </head>
+    
           <body className='font-opensans bg-gris-oscuro text-gris-claro'>
           
                <Navigation contactos={contactos} /> 
