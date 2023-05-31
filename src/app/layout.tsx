@@ -6,7 +6,7 @@ import Navigation from '../components/navigation'
 import FooterEsteban from '../components/footeresteban'
 
 
-const DancingScript = Dancing_Script({src:'../font/DancingScript.ttf',  weight: '700', variable: '--font-DancingScript'})
+const DancingScript = Dancing_Script({src:'../font/DancingScript.ttf',preload:true, weight: '700', variable: '--font-DancingScript'})
 const OpenSans = Open_Sans({src:'../font/OpenSans.ttf',  weight: '400', variable: '--font-OpenSans'})
 const KaushanScript = Kaushan_Script({src:'../font/KaushanScript.ttf', weight: '400', variable: '--font-KaushanScript'})
 
@@ -80,7 +80,16 @@ export default async function RootLayout({
   
   return (
     <html lang="es" className={`${OpenSans.variable} ${DancingScript.variable} ${KaushanScript.variable}`}>
-        
+        <head>
+        <link
+          rel="preload"
+          href="/DancingScript.ttf"
+          as="font"
+          crossOrigin="anonymous"
+          type="font/ttf"
+          
+        />
+      </head>
           <body className='font-opensans bg-gris-oscuro text-gris-claro'>
           
                <Navigation contactos={contactos} /> 
