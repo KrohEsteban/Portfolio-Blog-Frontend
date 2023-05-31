@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import escapeHTML from 'escape-html';
+
 
 export default function Post(props: { etiquetas: any, blogs: any }) {
 
