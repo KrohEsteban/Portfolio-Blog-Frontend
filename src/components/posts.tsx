@@ -35,7 +35,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
 
                             if (select === '') {
                                 return (
-                                    <Link key={i} href={`/blog/${item.Slug}`} className='space-ym-3 p-5 m-3 border-l-2 border-naranja text-gris-claro' >
+                                    <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
                                         <h4 className='text-start'>{item.Title}</h4>
                                         <p className='text-start'>{item.Description}</p>
                                     </Link>
@@ -50,7 +50,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
 
                                 if (corroborar) {
                                     return (
-                                        <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 border-l-2 border-naranja text-gris-claro' >
+                                        <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
                                             <h4 className='text-start'>{item.Title}</h4>
                                             <p className='text-start'>{item.Description}</p>
                                         </Link>
@@ -68,7 +68,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                    
                        { (nopost === props.blogs.docs.length) ?
 
-                        <button className='space-y-3 p-5 m-3 border-l-2 border-naranja text-gris-claro' >
+                        <button className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
                             <p className='text-start'>No se encontraron post con esta etiqueta</p>
                         </button>
                         :

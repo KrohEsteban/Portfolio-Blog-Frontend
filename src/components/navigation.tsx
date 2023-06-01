@@ -40,20 +40,20 @@ export default function Navigation(props: { contactos: any }) {
                         (menu ?
                             "z-50 justify-center w-full md:h-auto bg-gris-intermedio bg-opacity-60 absolute top-14 md:w-auto md:static flex animate-open-menu origin-top"
                             :
-                            "z-50 justify-center w-full md:h-auto bg-gris-intermedio bg-opacity-60 absolute top-14 md:w-auto md:static flex animate-close-menu origin-top md:animate-open-menu"
+                            "z-50 justify-center w-full md:h-auto bg-gris-intermedio bg-opacity-60 absolute top-14 md:w-auto md:static flex animate-close-menu origin-top md:animate-open-menu "
                         ) :
                         "hidden md:flex"} id="menu" >
 
-                        <ul className='w-3/4 md:w-auto bg-gris-intermedio bg-opacity-80 md:bg-inherit md:flex text-base md:text-gray-400'>
-                            <li className="flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-lg md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500"><Link href='/' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Inicio</Link></li>
+                        <ul className='w-3/4 md:w-auto bg-gris-intermedio bg-opacity-80 md:bg-inherit md:flex text-base md:text-gray-400 space-y-2 space-x-0 md:space-y-0 md:space-x-2 '>
+                            <li className="flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500"><Link href='/' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Inicio</Link></li>
 
-                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border-y border-gris-oscuro shadow-lg md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/blog' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Blog</Link></li>
+                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/blog' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Blog</Link></li>
 
-                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-lg md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/aptitudes' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Aptitudes</Link></li>
+                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/aptitudes' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Aptitudes</Link></li>
 
-                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border-y border-gris-oscuro shadow-lg md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/proyectos' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Proyectos</Link></li>
+                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/proyectos' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Proyectos</Link></li>
 
-                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-lg md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/hobby' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Hobby</Link></li>
+                            <li className='flex justify-end md:w-auto border-b md:px-2 md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500'><Link href='/hobby' className="p-6 md:p-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Hobby</Link></li>
                             <ul className='flex justify-center space-x-6 md:hidden py-10'>
                                 {
                                     props.contactos.docs.map((item: { Nombre: string, Url: string, Svg: string }) => {
