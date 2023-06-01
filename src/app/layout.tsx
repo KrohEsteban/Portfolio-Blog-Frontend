@@ -42,9 +42,7 @@ export const metadata = {
   //     'es-AR': '/es-AR',
   //   },
   // },
-  openGraph: {
-    images: '/favicon.svg',
-  },
+  
 
  
   // formatDetection: {

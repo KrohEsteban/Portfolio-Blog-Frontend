@@ -28,6 +28,13 @@ export async function generateMetadata(): Promise<Metadata> {
     title: data.Title,
     description: data.Description,
     keywords: keywords,
+    openGraph: {
+      title: data.Title,
+    description: data.Description,
+    url: 'https://estebankroh.com',
+    siteName: 'Esteban Kroh, programador web.',
+      images: data.ImageOpenGraph.url,
+    },
   };
 }
 
