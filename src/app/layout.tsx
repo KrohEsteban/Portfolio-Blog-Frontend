@@ -21,7 +21,7 @@ export const metadata = {
     template: '%s | Esteban Kroh, programador web.'
   }, 
   siteName: 'Esteban Kroh, programador web.',
-  themeColor: '#b85b22',  
+  themeColor: '#fbbf24',  
   referrer: 'origin-when-cross-origin',
   metadataBase: new URL('https://estebankroh.com'),
   
