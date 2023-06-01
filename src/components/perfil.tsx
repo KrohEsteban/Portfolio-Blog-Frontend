@@ -16,7 +16,7 @@ export default function Perfil(contactos:any) {
             />
             
          
-          <h1 className='text-amarillo'>
+          <h1 className='text-amarillo' aria-label='Esteban Kroh'>
           
             
             <Svgestebankroh/>

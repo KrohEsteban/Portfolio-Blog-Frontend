@@ -12,7 +12,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
     return (
         <>
             <div className='my-20'>
-                <h5 className='text-start p-3'>Explora las categorías:</h5>
+                <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>Explora las categorías:</p>
                 <div className='flex flex-wrap'>
                     <button onClick={(() => { setSelect('') })} className='p-5 m-3 rounded-lg shadow-sm border border-gris-claro bg-gris-intermedio hover:bg-gris-oscuro text-gris-claro' >Todos</button>
                     {
@@ -28,7 +28,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
 
 
             <div className='my-20'>
-                <h5 className='text-start p-3'>Posts:</h5>
+                <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>Posts:</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 py-5'>
                     {
                         props.blogs.docs.map((item: any, i: number) => {

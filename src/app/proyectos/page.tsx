@@ -56,8 +56,8 @@ export default async function Page() {
 
 
               <div className="text-center col-span-7 md:col-span-3 ">
-                <h4> <Link className='' href={'/blog/'+item.Post.Slug} >{item.TituloProyect}</Link> </h4>
-                <h5>{item.Stack}</h5>
+                <p className="text-center text-xl sm:text-2xl lg:text-3xl"> <Link className='' href={'/blog/'+item.Post.Slug} >{item.TituloProyect}</Link> </p>
+                <p className="text-center text-lg sm:text-xl lg:text-2xl">{item.Stack}</p>
                 <p>{item.TextoCortoDelProyecto}</p>
               </div>
 

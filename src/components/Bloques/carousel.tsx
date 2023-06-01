@@ -37,7 +37,7 @@ export default function Carousel (props:{children:any}):any {
     </div>
      {/* <!-- Slider indicators --> */}
     <div className="absolute z-30 flex-row  -translate-x-1/2 bottom-5 left-1/2 text-center space-y-2">
-        <h5 className="p-1 text-white" style={{textShadow:'#000 1px 1px'}}>{props.children[foto].titulo} </h5>
+        <p className="p-1 text-white text-center text-lg sm:text-xl lg:text-2xl" style={{textShadow:'#000 1px 1px'}}>{props.children[foto].titulo} </p>
         <p className="p-1 text-white"  style={{textShadow:'#000 1px 1px'}}>{props.children[foto].subtitulo} </p>
         <div className="pt-6 space-x-3 flex justify-center">
             {
