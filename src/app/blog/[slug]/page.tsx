@@ -56,7 +56,7 @@ export default async function Page({params}: Props) {
               {
               contactos.docs.map((item:{Nombre:string, Url:string, Svg:string})=>{
                return<li className='w-8 sm:w-9 md:w-10 ' key={item.Nombre}>
-                    <a className='stroke-none text-gris-claro p-4 m-auto ' href={item.Url} target="_blank" rel="noopener noreferrer">{<div dangerouslySetInnerHTML={{ __html: item.Svg }}/>}<p className="hidden">{item.Nombre}</p></a>
+                    <a className='stroke-none text-amarillo p-4 m-auto ' href={item.Url} target="_blank" rel="noopener noreferrer">{<div dangerouslySetInnerHTML={{ __html: item.Svg }}/>}<p className="hidden">{item.Nombre}</p></a>
                 </li> 
                 })
               }
