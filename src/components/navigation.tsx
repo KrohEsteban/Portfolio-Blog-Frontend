@@ -4,27 +4,32 @@ import Link from "next/link";
 
 
 
-export default function Navigation(props: { contactos: any }) {
+export default function Navigation(props: { contactos: any}) {
 
     const menuescondido: boolean = false
     const menuvisible: boolean = true
-
+    
 
 
     const [menu, setMenu] = useState(menuescondido);
     const [entro, setEntro] = useState(false);
 
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll",()=>{
+        setEntro(true)
+        if(menu === menuescondido){
+            setMenu(menuescondido)
+        }
+            
+        })
+      }
+
+    
+
     return (
         <>
-            <div className='py-2 bg-gris-intermedio' onBlur={
-                                () => {
-                                    setEntro(true),
-                                    (menu === menuescondido) ? (
-    
-                                        setMenu(menuvisible))
-                                        : setMenu(menuescondido)
-                                }}>
-                <nav className='md:flex md:justify-around relative'>
+            <div className='py-2 bg-gris-intermedio' >
+                <nav className='md:flex md:justify-around relative' >
                     <div className='flex items-center justify-around'>
                         <Link className="text-4xl text-inherit" href='/'><span className='font-dancingscript'>Esteban Kroh</span></Link>
                         <button className="flex justify-center h-10 w-10 md:hidden aria-expanded:toggle-btn" aria-label="Menu"
@@ -50,8 +55,8 @@ export default function Navigation(props: { contactos: any }) {
                             :
                             "z-50 justify-center w-full md:h-auto bg-gris-intermedio bg-opacity-60 absolute top-14 md:w-auto md:static flex animate-close-menu origin-top md:animate-open-menu "
                         ) :
-                        "hidden md:flex"} id="menu" >
-
+                        "hidden md:flex"} id="menu" > 
+                       
                         <ul className='w-3/4 md:w-auto bg-gris-intermedio bg-opacity-80 md:bg-inherit md:flex text-base md:text-gray-400 space-y-2 space-x-0 md:space-y-0 md:space-x-2 '>
                             <li ><Link href='/' className="flex justify-end md:w-auto border-b md:border border-gris-oscuro shadow-md shadow-amarillo md:border-y-transparent md:hover:bg-gris-oscuro md:hover:border-y-gray-500 p-6 md:py-4 text-inherit" onClick={() => { (menu === menuescondido) ? setMenu(menuvisible) : setMenu(menuescondido) }}>Inicio</Link></li>
 
