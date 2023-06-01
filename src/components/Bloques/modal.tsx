@@ -20,7 +20,7 @@ export default function Modal (props:{children:any}):any {
                 </RichTextModal>
             </div> 
           ) : (
-            <div ref={ref} className="w-11/12 border p-4  border-gris-claro bg-gris-intermedio text-center brillos">
+            <div ref={ref} className="w-11/12 border p-4 border-gris-claro bg-gris-intermedio text-center sinbrillo">
                 <RichTextModal>
                 {props.children}
                 </RichTextModal>
