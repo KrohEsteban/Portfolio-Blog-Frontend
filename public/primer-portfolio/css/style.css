@@ -1,0 +1,539 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/* nav */
+
+.nav{
+    background-color: black;
+    display: flex;
+    justify-content:space-around; 
+    align-items: center; 
+    position: fixed;
+    top:0px;
+    height: 80px;
+    width: 100vw;
+    z-index: 9;
+}
+
+
+
+.navegacion{
+    display: flex;
+    justify-content:space-around;  
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a{
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.3em;
+}
+
+.nav .nombremenu{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+
+.navegacion a:hover{
+    border-bottom: white 1px solid;
+}
+
+
+/* perfil */
+
+.perfil{
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 80px;
+    border-bottom: black 1px solid;
+    
+}
+
+.fotoperfil{
+    width: 200px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    visibility:visible;
+}
+
+.perfil h1{
+    font-size: 500%;
+}
+ 
+.perfil h3{
+    font-size: 300%;
+}
+
+.perfil i{
+    padding: 20px;
+    color: black;
+}
+
+
+/* sobre mi */
+
+.sobremi{
+    text-align:justify;
+    padding-top: 80px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:1.3em;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    border-bottom: black 1px solid;
+    
+}
+
+.sobremi h1{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.meandfoto{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+      
+}
+
+span a{
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes img{
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.enrollers{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    opacity: 0;
+}
+
+.animacionenrollers{
+    animation: img 3s;
+    opacity: 1;
+}
+
+/* propuesta */
+
+.propuesta{
+    padding: 80px 0 ;
+    background-color:whitesmoke;
+}
+
+/* que ofrecemos */
+
+.ofrecemosypag{
+    display: grid;
+    min-height: 600px;
+    width: 100%;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%; 
+    padding: 0 50px;  
+    margin-bottom: 40px;
+}
+
+.ofrecemos{
+    text-align:justify;
+    padding-top: 40px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:1.3em;
+    
+}
+
+.ofrecemos h2{
+    text-align: center;
+    
+}
+
+.fondopag{
+    background-color:rgba(26, 18, 141, 0.8);
+    margin:0 auto;
+    padding: 40px;
+    width: 100%;
+    height: 500px;
+    border-radius: 5%;
+    border-bottom-left-radius: 30%;
+    align-self: center;
+}
+
+
+.pag{
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    max-width: 300px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 25% 46% 25%;
+    gap: 2%;
+    font-size: 190%;
+    color: white;
+}
+
+.pag p{
+    white-space: nowrap;
+}
+
+
+@keyframes movheader{
+    from {width: 40%; background-color: rgba(255, 127, 80, 0.0);}
+    to {width: 100%; background-color: rgba(255, 127, 80, 0.8);}
+}
+
+.header{
+    display: block;
+    background-color: rgba(255, 127, 80, 0.8);
+    position: relative;
+    animation: movheader 3s ;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+    text-align: center;
+    height: 100%;
+    color: black;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 58% 40%;
+    gap: 2%;
+}
+
+@keyframes movarticle{
+    from {width: 40%; background-color: rgba(255, 140, 0, 0.0);}
+    to {width: 100%; background-color: rgba(255, 140, 0, 0.8);}
+}
+
+.article{
+    display: block;
+    background-color: rgba(255, 140, 0, 0.8);
+    position: relative;
+    animation: movarticle 2s ;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 130%;
+    text-align:center;
+    padding-left: 3%;
+    align-self: center;
+    height: 100%;
+    z-index: 1;
+    color: black;
+}
+
+@keyframes movaside{
+    from {width: 40%; background-color: rgba(135, 207, 235, 0.0);}
+    to {width: 100%; background-color: rgba(135, 207, 235, 0.8);}
+}
+
+.aside{
+    display: block;
+    background-color:rgba(135, 207, 235, 0.8);
+    position: relative;
+    animation: movaside 4s ;
+}
+
+@keyframes movfooter{
+    from {width: 40%; background-color: rgba(153, 50, 204, 0.0);}
+    to {width: 100%; background-color: rgba(153, 50, 204, 0.8);}
+}
+.footer{
+    display: block;
+    background-color: rgba(153, 50, 204, 0.8);
+    position: relative;
+    animation: movfooter 3s ;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    align-self: center;
+    height: 100%;
+    color: black;
+}
+
+
+/*  clientes */
+
+.clientes{
+    font-size:1.3em;
+    text-align:justify;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    margin-top: 80px;
+    border-top: black 1px solid;
+    
+}
+
+.clientes h2{
+    margin: 80px;
+}
+/* trabajos */
+
+.trabajos{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns:  30% 30% ;
+    row-gap: 5%;
+    
+
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+    border: solid 3px black ;
+    border-radius: 2%;
+
+}
+
+
+/* footer */
+
+.footnav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    bottom: 0px;
+    position:relative;
+    box-sizing: border-box;
+    
+}
+
+.footnav p{
+    color: white;
+    font-size: 1.3em;
+    align-self: center;
+}
+
+.footnav a{ 
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6em;
+}
+
+/* media query ancho 1350px */
+
+@media (max-width: 1350px){
+    .card{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+}
+
+/* media query ancho 1000px */
+
+@media (max-width: 1000px){
+    .card{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .trabajos{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 200px;
+    
+    }
+
+    .ofrecemosypag{
+        grid-template-columns: 100%;
+        
+    }
+}
+
+/* media query ancho 850px */
+
+@media (max-width: 850px){
+    .meandfoto{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .enrollers{
+        display: block;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .propuesta{
+        padding: 5px 0 ;
+        background-color:whitesmoke;
+    }
+
+}  
+
+
+/* media query ancho 725px */
+
+@media (max-width: 725px){
+    
+    .navegacion{
+        display:flex;
+        flex-direction: column;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 80px;
+        align-items: center;
+        justify-content:flex-start;  
+        padding-top: 50px;   
+    }
+
+    .navegacion a{
+        padding: 30px;
+        font-size: 1.3em;
+    }
+
+    .navegacion a:hover{
+        border-bottom: 0px;
+    }
+
+    .logoburger{
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .logoburger i{
+        color: white;
+        font-size: 2.5em;
+        
+    }
+    
+    nav .active{
+        display: none;
+    }
+
+
+}  
+
+
+/* media query ancho 550px */
+
+@media (max-width: 550px){
+
+    .container{
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    
+    .perfil h1{
+        font-size: 400%;
+    }
+     
+    .perfil h3{
+        font-size: 200%;
+    }
+
+}    
+
+
+/* media query ancho 500px */
+
+@media (max-width: 500px){
+    
+    .card{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .ofrecemosypag{
+        padding: 15px;
+    }
+
+    .meandfoto{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .costos{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .footnav p{
+        width: 350px;
+    }
+
+}
+
+/* media query 386px */
+
+@media (max-width: 386px){
+    .iconos{
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .trabajos{
+        display: none;    
+    }
+
+    .muestras{
+        display: block;
+        
+    }
+
+    .muestras h4 a{
+        color: rgba(0, 0, 88, 0.9);
+    }
+
+    
+    .perfil h1{
+        font-size: 300%;
+    }
+     
+    .perfil h3{
+        font-size: 200%;
+    }
+    
+}
+
+/* media query ancho 319px */
+
+@media (max-width: 319px){
+
+    .pag{
+        font-size: 150%;
+    }
+
+}
+
+/* media query 500px para la altura*/
+
+@media (max-height: 500px){
+    .fotoperfil{
+        width: 40vh;
+    }
+    
+}
+
