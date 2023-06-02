@@ -55,6 +55,7 @@ export default async function Page() {
       {Bloques(data.Contenido)}
   </div>
     <Post etiquetas={etiquetas} blogs={blogs} />
+    
   </>
     
   )

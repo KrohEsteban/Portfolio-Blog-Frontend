@@ -62,12 +62,6 @@
     @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
   }
 
-  .brillosize {
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-  }
-
   .sinbrillo {
     margin: 0 auto;
     margin-top: 15px;
@@ -93,6 +87,16 @@
     top: -100%;
     position: absolute;
     transition: none;
+  }
+
+  .sinbrillo:before {
+    left: -500px;
+ 
+  }
+
+  .sinbrillo:after {
+    right: -500px;
+
   }
 
   .brillo {

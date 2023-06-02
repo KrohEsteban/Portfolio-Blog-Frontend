@@ -26,20 +26,20 @@ export async function generateMetadata(
 
   let keywords: Array<string> = []
 
-  data.PalabrasClaves.map((item: { titulo: string }) => {
+  data?.PalabrasClaves.map((item: { titulo: string }) => {
     keywords.push(item.titulo)
   })
 
   return {
-    title: data.Title,
-    description: data.Description,
+    title: data?.Title,
+    description: data?.Description,
     keywords: keywords,
     openGraph: {
-      title: data.Title,
-    description: data.Description,
+      title: data?.Title,
+    description: data?.Description,
     url: 'https://estebankroh.com',
     siteName: 'Esteban Kroh, programador web.',
-      images: data.ImageOpenGraph.sizes.thumbnail.url,
+      images: data?.ImageOpenGraph.sizes.thumbnail.url,
     },
   };
 }
@@ -54,11 +54,11 @@ export default async function Page({params}: Props) {
 
   return (
   <><div className='text-end py-2'>
-    <p >Actualizado el {data.updatedAt.slice(8, 10)}/{data.updatedAt.slice(5, 7)}/{data.updatedAt.slice(2, 4)}</p>
+    <p >Post actualizado el {data?.updatedAt.slice(8, 10)}/{data?.updatedAt.slice(5, 7)}/{data?.updatedAt.slice(2, 4)}</p>
   </div>
   
   <div>
-      {Bloques(data.Contenido)}
+      {Bloques(data?.Contenido)}
   </div>
 
   <div>

@@ -19,13 +19,12 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                         props.etiquetas.docs.map((item: any, i: number) => {
                             const url = item.Titulo.replaceAll(" ", "-")
                             return (
-                                <button onClick={(() => { setSelect(item.Titulo) })} key={i} className='p-5 m-3 rounded-lg shadow-sm border border-gris-claro bg-gris-intermedio hover:bg-gris-oscuro text-gris-claro' >{item.Titulo}</button>
+                                <button key={i} onClick={(() => { setSelect(item.Titulo) })} className='p-5 m-3 rounded-lg shadow-sm border border-gris-claro bg-gris-intermedio hover:bg-gris-oscuro text-gris-claro'>{item.Titulo}</button>
                             )
                         })
                     }
                 </div>
             </div>
-
 
             <div className='my-20'>
                 <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>Posts:</p>
@@ -42,7 +41,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                                 )
                             } else {
                                 let corroborar: boolean = false
-                                item.etiquetas.map((item: any) => {
+                                item.etiquetas?.map((item: any) => {
                                     if (select === item.Titulo) {
                                         corroborar = true
                                     }
