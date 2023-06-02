@@ -12,12 +12,12 @@ export default function Navigation(props: { contactos: any}) {
 
 
     const [menu, setMenu] = useState(menuescondido);
-    const [entro, setEntro] = useState(false);
+    const [entro, setEntro] = useState(false); // previene la primera ves el menu abierto
 
     if (typeof window !== "undefined") {
         window.addEventListener("scroll",()=>{
-        setEntro(true)
-        if(menu === menuescondido){
+        
+        if( (menu === menuvisible)){
             setMenu(menuescondido)
         }
             

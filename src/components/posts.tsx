@@ -36,8 +36,8 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                             if (select === '') {
                                 return (
                                     <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
-                                        <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>{item.Title}</p>
-                                        <p className='text-start'>{item.Description}</p>
+                                        <p className='text-start text-lg sm:text-xl lg:text-2xl p-2'>{item.Title}</p>
+                                        <p className='text-start p-2'>{item.Description}</p>
                                     </Link>
                                 )
                             } else {
@@ -51,8 +51,8 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                                 if (corroborar) {
                                     return (
                                         <Link key={i} href={`/blog/${item.Slug}`} className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
-                                            <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>{item.Title}</p>
-                                            <p className='text-start'>{item.Description}</p>
+                                            <p className='text-start text-lg sm:text-xl lg:text-2xl p-2'>{item.Title}</p>
+                                            <p className='text-start p-2'>{item.Description}</p>
                                         </Link>
                                     )
                                 } else {
@@ -69,7 +69,7 @@ export default function Post(props: { etiquetas: any, blogs: any }) {
                        { (nopost === props.blogs.docs.length) ?
 
                         <button className='space-y-3 p-5 m-3 shadow-[-10px_-10px_10px_-10px] shadow-amarillo text-gris-claro' >
-                            <p className='text-start text-lg sm:text-xl lg:text-2xl p-3'>No se encontraron post con esta etiqueta</p>
+                            <p className='text-start text-lg sm:text-xl lg:text-2xl p-2'>No se encontraron post con esta etiqueta</p>
                         </button>
                         :
                         <></>
