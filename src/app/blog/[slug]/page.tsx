@@ -39,7 +39,7 @@ export async function generateMetadata(
     description: data.Description,
     url: 'https://estebankroh.com',
     siteName: 'Esteban Kroh, programador web.',
-      images: data.ImageOpenGraph.url,
+      images: data.ImageOpenGraph.sizes.thumbnail.url,
     },
   };
 }
