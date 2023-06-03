@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogs.docs.map((item: any) => {
        sitemap.push(
         {
-                url: 'https://estebankroh.com/blog'+item.Slug,
+                url: 'https://estebankroh.com/blog/'+item.Slug,
                 lastModified: new Date(), 
             }
        )
