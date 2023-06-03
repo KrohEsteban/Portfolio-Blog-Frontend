@@ -83,7 +83,7 @@ export default async function RootLayout({
           
                <Navigation contactos={contactos} /> 
       
-              <main className="w-11/12 sm:w-5/6 max-w-4xl m-auto flex-row">
+              <main className="w-11/12 sm:w-5/6 max-w-5xl m-auto flex-row">
                 {children}
               </main>
               

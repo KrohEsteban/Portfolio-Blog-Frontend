@@ -1,6 +1,5 @@
 'use client'
 import { useInView } from "react-intersection-observer";
-import RichText from "./richtextnormal";
 import RichTextModal from "./richtextmodal";
 
   

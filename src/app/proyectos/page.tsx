@@ -1,7 +1,6 @@
 import Bloques from "@/components/Bloques";
+import Proyectos from "@/components/proyectos";
 import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 
 
 async function getData() {
@@ -53,45 +52,13 @@ export default async function Page() {
       </div>
 
       <div>
-        {proyectos.docs.map((item: any) => {
-
-
-
-          return (
-
-            <div className='grid grid-cols-7 gap-4 py-20' key={item.TituloProyect}>
-
-
-              <div className="text-center col-span-7 md:col-span-3 ">
-                <p className="text-center text-xl sm:text-2xl lg:text-3xl"> <Link className='' href={'/blog/'+item.Post.Slug} >{item.TituloProyect}</Link> </p>
-                <p className="text-center text-lg sm:text-xl lg:text-2xl">{item.Stack}</p>
-                <p>{item.TextoCortoDelProyecto}</p>
-              </div>
-
-              
-                  <Image src={item.ImagenDescktop.webp.url} alt={item.ImagenDescktop.Alt}
-                  width={300}
-                  height={150}
-                  className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-3'
-                />
-              
-              <Image src={item.ImagenCelu.webp.url} alt={item.ImagenCelu.Alt}
-                  width={100}
-                  height={200}
-
-                  className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-1'
-                />
-         
-                
-           
-
-            </div>
-
-
-          )
-        })
-
-        }
+ 
+       { proyectos.docs.map((item: any) => {
+      return (<Proyectos key={item.TituloProyect}>
+            {item}
+            </Proyectos>)
+        })}
+        
 
       </div>
     </>

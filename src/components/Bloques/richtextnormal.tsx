@@ -182,8 +182,8 @@ switch (node.type) {
         <div key={i} className='p-5 '>
 
         <Image src={node.value?.webp?.url}  alt={ node.value?.Alt }
-            width={200}
-            height={200}
+            width={900}
+            height={900}
          
             className='object-cover m-auto'
           />

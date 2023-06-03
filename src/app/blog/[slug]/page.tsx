@@ -53,12 +53,14 @@ export default async function Page({params}: Props) {
 
 
   return (
-  <><div className='text-end py-2'>
-    <p >Post actualizado el {data?.updatedAt.slice(8, 10)}/{data?.updatedAt.slice(5, 7)}/{data?.updatedAt.slice(2, 4)}</p>
-  </div>
+  <>
   
   <div>
       {Bloques(data?.Contenido)}
+  </div>
+
+<div className='text-center py-10'>
+    <p >Post actualizado el {data?.updatedAt.slice(8, 10)}/{data?.updatedAt.slice(5, 7)}/{data?.updatedAt.slice(2, 4)}</p>
   </div>
 
   <div>
