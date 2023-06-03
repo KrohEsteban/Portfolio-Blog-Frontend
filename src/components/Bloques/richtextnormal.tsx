@@ -126,7 +126,7 @@ switch (node.type) {
       }else{
       
         return (
-          <Link key={i} href={(typeof node.url !== 'undefined')?node.url:'#'}>
+          <Link key={i} target="_blank" rel="noopener noreferrer" href={(typeof node.url !== 'undefined')?node.url:'#'}>
           <RichTextNormal>
              {node.children}
           </RichTextNormal>
