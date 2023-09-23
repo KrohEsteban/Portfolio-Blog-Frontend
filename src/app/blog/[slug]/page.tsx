@@ -14,7 +14,7 @@ async function getData( slug: string ) {
 }
 
 async function getContactos(){
-    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
+    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
   }
 
 

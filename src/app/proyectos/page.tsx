@@ -8,7 +8,7 @@ async function getData() {
 
 }
 async function getProyectos() {
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/proyectos', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/proyectos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
 
 }
 

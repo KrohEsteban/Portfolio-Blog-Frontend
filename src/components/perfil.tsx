@@ -12,7 +12,7 @@ export default function Perfil(contactos:any) {
               priority={true}
               height={200}
               width={200}
-              className='object-cover rounded-[50%] animacionopacidad  m-auto'
+              className='object-cover w-auto h-auto rounded-[50%] animacionopacidad m-auto'
             />
             
          
@@ -26,18 +26,18 @@ export default function Perfil(contactos:any) {
 
           <div className='m-auto w-full space-y-8'>
 
-<h2 >Programador web</h2>
-<h3>Contacto: </h3>
-<ul className='flex justify-center space-x-6'>
-  {
-  contactos.children.docs?.map((item:{Nombre:string, Url:string, Svg:string})=>{
-   return<li className='w-10 sm:w-11 md:w-12' key={item.Nombre}>
-        <a className='stroke-none text-gris-claro p-4 m-auto' href={item.Url} target="_blank" rel="noopener noreferrer" aria-label={item.Nombre}>{<div dangerouslySetInnerHTML={{ __html: item.Svg }}/>}</a>
-    </li> 
-    })
-  }
-</ul>
-</div>
+            <h2 >Programador web</h2>
+            <h3>Contacto: </h3>
+            <ul className='flex justify-center space-x-6'>
+              {
+              contactos.children.docs?.map((item:{Nombre:string, Url:string, Svg:string})=>{
+              return<li className='w-10 sm:w-11 md:w-12' key={item.Nombre}>
+                    <a className='stroke-none text-gris-claro p-4 m-auto' href={item.Url} target="_blank" rel="noopener noreferrer" aria-label={item.Nombre}>{<div dangerouslySetInnerHTML={{ __html: item.Svg }}/>}</a>
+                </li> 
+                })
+              }
+            </ul>
+          </div>
     </>
     )
 

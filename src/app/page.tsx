@@ -8,7 +8,7 @@ async function getData(){
 }
 
 async function getContactos(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
 }
 
 
@@ -54,10 +54,6 @@ export default async function Page() {
            </Perfil>
 
            
-
-          
-
-
         </div>
               <div>
                 {Bloques(data.Contenido)}

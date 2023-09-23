@@ -9,7 +9,7 @@ import Bloques from '@/components/Bloques';
 }
 
 async function getTecnologias(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/tecnologias', {next: { revalidate: 10 }}).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/tecnologias?limit=0', {next: { revalidate: 10 }}).then((res) => res.json());
 }
 
 
