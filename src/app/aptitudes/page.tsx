@@ -4,12 +4,12 @@ import Bloques from '@/components/Bloques';
 
 
  async function getData(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679656aa702068d83315cf', {next: { revalidate: 10 }}).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679656aa702068d83315cf').then((res) => res.json());
   
 }
 
 async function getTecnologias(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/tecnologias?limit=0', {next: { revalidate: 10 }}).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/tecnologias?limit=0').then((res) => res.json());
 }
 
 

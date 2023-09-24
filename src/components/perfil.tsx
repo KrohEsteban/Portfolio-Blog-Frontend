@@ -2,16 +2,17 @@
 import React from 'react'
 import Image from 'next/image';
 import Svgestebankroh from './svgestebankroh';
+import profile from '/public/perfil.webp'
    
 
 export default function Perfil(contactos:any) {
 
     return (
         <>
-         <Image src='/perfil.webp' alt='Esteban Kroh, programador web, foto de perfil.'
+         <Image src={profile} alt='Esteban Kroh, programador web, foto de perfil.'
               priority={true}
-              height={200}
               width={200}
+              height={200}
               className='object-cover w-auto h-auto rounded-[50%] animacionopacidad m-auto'
             />
             

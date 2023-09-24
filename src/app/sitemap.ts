@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
  
 
 async function getBlogs() {
-    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog', { next: { revalidate: 10 } }).then((res) => res.json());
+    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog').then((res) => res.json());
   }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

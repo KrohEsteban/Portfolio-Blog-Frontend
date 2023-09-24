@@ -5,13 +5,13 @@ import Open_Sans from 'next/font/local'
 import Navigation from '../components/navigation'
 import FooterEsteban from '../components/footeresteban'
 
-
+export const revalidate = 3600 // revalidate at most every hour
 const DancingScript = Dancing_Script({src:'../font/DancingScript.ttf',preload:true, weight: '700', variable: '--font-DancingScript'})
 const OpenSans = Open_Sans({src:'../font/OpenSans.ttf',  weight: '400', variable: '--font-OpenSans'})
 const KaushanScript = Kaushan_Script({src:'../font/KaushanScript.ttf', weight: '400', variable: '--font-KaushanScript'})
 
 async function getContactos(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos').then((res) => res.json());
 }
 
 

@@ -8,13 +8,13 @@ type Props = {
 
 async function getData( slug: string ) {
 
-    const data= await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog?where[Slug][equals]=' + slug, { next: { revalidate: 10 } }).then((res) => res.json());
+    const data= await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog?where[Slug][equals]=' + slug).then((res) => res.json());
     return data.docs[0]
 
 }
 
 async function getContactos(){
-    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
+    return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0').then((res) => res.json());
   }
 
 

@@ -4,15 +4,15 @@ import { Metadata } from 'next';
 
 async function getData() {
 
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679c9e65efdb4becb2ba48', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679c9e65efdb4becb2ba48').then((res) => res.json());
 }
 
 async function getEtiquetas() {
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/etiquetas?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/etiquetas?limit=0').then((res) => res.json());
 }
 
 async function getBlogs() {
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/blog?limit=0').then((res) => res.json());
 }
 
 

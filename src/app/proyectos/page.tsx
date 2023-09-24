@@ -4,11 +4,11 @@ import { Metadata } from "next";
 
 
 async function getData() {
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679bb365efdb4becb2b9fe', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/64679bb365efdb4becb2b9fe').then((res) => res.json());
 
 }
 async function getProyectos() {
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/proyectos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/proyectos?limit=0').then((res) => res.json());
 
 }
 

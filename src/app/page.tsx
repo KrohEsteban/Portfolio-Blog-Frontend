@@ -4,11 +4,11 @@ import Perfil from '@/components/perfil';
 
 
 async function getData(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/646795d7aa702068d833159e', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/pages/646795d7aa702068d833159e').then((res) => res.json());
 }
 
 async function getContactos(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0', { next: { revalidate: 10 } }).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL + '/api/contactos?limit=0').then((res) => res.json());
 }
 
 

@@ -5,7 +5,7 @@ import { Metadata, ResolvingMetadata } from 'next';
 
 
 async function getData(){
-  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/pages/64679c1b65efdb4becb2ba21', {next: { revalidate: 10 }}).then((res) => res.json());
+  return await fetch(process.env.PAYLOAD_PUBLIC_SERVER_URL+'/api/pages/64679c1b65efdb4becb2ba21').then((res) => res.json());
 
 }
 
