@@ -1,21 +1,12 @@
-'use client'
+
 import Image from "next/image";
 import Link from "next/link";
 
 
 export default function Proyectos (props:{children:any}){
    
-    
-
-
-
             return (
-  
-             
-  
-  
-         
-          
+           
         <div className='grid grid-cols-7 gap-4 py-20' >
 
 
@@ -29,19 +20,16 @@ export default function Proyectos (props:{children:any}){
             <Image src={props.children.ImagenDescktop.webp.url} alt={props.children.ImagenDescktop.Alt}
             width={300}
             height={150}
-            className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-3'
+            className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-3 '// h-[150] w-[300]'
           />
         
         <Image src={props.children.ImagenCelu.webp.url} alt={props.children.ImagenCelu.Alt}
             width={100}
             height={200}
 
-            className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-1'
+            className='border-4 border-black shadow-lg m-auto col-span-7 md:col-span-1 '// w-[100] h-[200]'
           />
    
-          
-     
-
       </div>
 
       )

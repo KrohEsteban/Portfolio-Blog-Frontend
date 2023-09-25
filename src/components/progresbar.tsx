@@ -1,5 +1,5 @@
 'use client'
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useInView } from 'react-intersection-observer';
                                                                                                                                                                                                                                         
 export default function Progresbar(props:{stack:string, progress:number}):any {

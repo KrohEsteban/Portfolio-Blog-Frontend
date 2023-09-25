@@ -1,5 +1,4 @@
-'use client'
-import Image from 'next/image';
+
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 import Serializar from './serializar';

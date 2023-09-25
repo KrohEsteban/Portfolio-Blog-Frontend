@@ -1,7 +1,5 @@
-'use client'
 
 import Image from "next/image";
-import RichTextModal from "./richtextmodal";
 
   
 export default function FotoBaner (props:{children:any}):any {

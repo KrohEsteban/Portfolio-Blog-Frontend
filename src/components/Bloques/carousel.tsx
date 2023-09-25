@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { useState } from "react";
 
 
@@ -25,10 +24,9 @@ export default function Carousel (props:{children:any}):any {
     {/* <!-- Item  --> */}
         
                     <div className=" duration-700 ease-in-out" data-carousel-item> 
-                        <Image src={props.children[foto].Image.webp.url}  alt={props.children[foto].Image.Alt }
-                            width={800}
-                            height={600}
-                            className='object-cover m-auto'
+                        <img src={props.children[foto].Image.webp.url}  alt={props.children[foto].Image.Alt }
+                            
+                            className='object-cover m-auto w-[800] h-[600]'
                         />
                         {/* <img src={props.children[foto].Image.webp.url} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." /> */}
                     </div>

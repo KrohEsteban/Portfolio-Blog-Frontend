@@ -1,7 +1,4 @@
-'use client'
 
-import Image from "next/image";
-import RichTextModal from "./richtextmodal";
 import RichTextNormal from "./richtextnormal";
 
 
