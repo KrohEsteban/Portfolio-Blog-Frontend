@@ -2,7 +2,6 @@ name: Check Versions
 run-name: Check Versions
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  check-versions:
     steps:
       - run: docker compose -f .docker/compose.yaml run dev ncu

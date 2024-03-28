@@ -1,7 +1,8 @@
 FROM node:20 AS builder
 WORKDIR /app
 COPY . .
-RUN npm install -g npm-check-updates && \
+RUN cp .docker/.env/dist .docker/.env && \
+    npm install -g npm-check-updates && \
     npm install && \
     npm run build
 EXPOSE 3000
