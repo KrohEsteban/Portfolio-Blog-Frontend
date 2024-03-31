@@ -6,17 +6,15 @@ on:
   schedule:
     - cron: '0 9 * * 1'
 jobs:
-  check-versions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: cp .env.dist .env
-      - run: docker compose -f .docker/compose.yaml run dev ncu
-
   check-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node
         with:
           node-version: 20
+      - uses: actions/checkout
       - run: npm install --global npm-check-updates
       - run: ncu
+      - if: ${{ steps.check-updates.outcome == 'failure' }}
+        run: |
+          echo "::error:: Hay dependencias desactualizadas."
