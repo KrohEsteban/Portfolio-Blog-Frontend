@@ -9,10 +9,10 @@ jobs:
   check-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node
+      - uses: actions/setup-node@v1
         with:
           node-version: 20
-      - uses: actions/checkout
+      - uses: actions/checkout@v1
       - run: npm install --global npm-check-updates
       - run: ncu
       - if: ${{ steps.check-updates.outcome == 'failure' }}
