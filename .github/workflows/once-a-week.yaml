@@ -6,4 +6,5 @@ jobs:
   check-versions:
     runs-on: ubuntu-latest
     steps:
+      - run: cp .env.dist .env
       - run: docker compose -f .docker/compose.yaml run dev ncu
