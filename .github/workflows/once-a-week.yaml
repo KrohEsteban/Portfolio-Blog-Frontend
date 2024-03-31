@@ -14,5 +14,4 @@ jobs:
           node-version: 20
       - uses: actions/checkout@v2
       - run: npm install --global npm-check-updates
-      - run: ncu >> ncu_output.txt
-      - run: echo "${{ steps.ncu_output.outputs.ncu_output }}"
+      - run: ncu
