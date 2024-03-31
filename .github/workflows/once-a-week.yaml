@@ -1,4 +1,5 @@
 name: Check once a week
+run-name: Check once a week
 on:
   push:
     branches:
