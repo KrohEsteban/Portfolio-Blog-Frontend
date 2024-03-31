@@ -15,8 +15,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm install --global npm-check-updates
       - run: ncu >> ncu_output.txt
-      - uses: actions/github-script@v4
-        with:
-          script: |
-            github.actions.setOutput('ncu_output', fs.readFileSync('ncu_output.txt', 'utf-8'))
-            console.log('${{ steps.ncu_output.outputs.ncu_output }}')
+      - run: echo "${{ steps.ncu_output.outputs.ncu_output }}"
