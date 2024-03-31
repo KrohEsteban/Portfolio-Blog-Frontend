@@ -1,9 +1,8 @@
 name: Check once a week
-run-name: Check once a week
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: '0 9 * * 1'
 jobs:
