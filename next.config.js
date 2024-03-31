@@ -1,7 +1,7 @@
 // /** @type {import('next').NextConfig} */
 
 // const nextConfig = {
-  // images: { 
+  // images: {
   //   domains: ['localhost','api.estebankroh.com'],
 
   // },
@@ -18,7 +18,7 @@ const withPWA = require("@ducanh2912/next-pwa").default({
 
 module.exports = withPWA({
   // Next.js config
-  images: { 
+  images: {
     domains: ['localhost','api.estebankroh.com'],
 
   },

@@ -1,17 +1,17 @@
 FROM node:20 AS builder
-WORKDIR /app
+WORKDIR /app/
 COPY . .
-RUN cp .docker/.env/dist .docker/.env && \
-    npm install -g npm-check-updates && \
-    npm install && \
-    npm run build
+RUN yarn global add npm-check-updates
+RUN yarn install
+RUN yarn run build
 EXPOSE 3000
 
 FROM builder as dev
-ENV NODE_ENV=developer
-CMD npm run dev
-
+ENV NODE_ENV=development
+COPY --from=builder /app/ /app/
+CMD yarn dev
 
 FROM builder as prod
 ENV NODE_ENV=production
-CMD npm run start
+COPY --from=builder /app/ /app/
+CMD yarn start

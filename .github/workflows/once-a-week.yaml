@@ -1,0 +1,9 @@
+name: Check once a week
+run-name: Check once a week
+schedule:
+    - cron: "0 9 * * 1"
+jobs:
+  check-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker compose -f .docker/compose.yaml run dev ncu
