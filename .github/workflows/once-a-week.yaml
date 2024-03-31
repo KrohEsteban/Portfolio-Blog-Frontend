@@ -9,12 +9,14 @@ jobs:
   check-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 20
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - run: npm install --global npm-check-updates
-      - run: ncu
-      - if: ${{ steps.check-updates.outcome == 'failure' }}
-        run: |
-          echo "Hay dependencias desactualizadas."
+      - run: ncu >> ncu_output.txt
+      - uses: actions/github-script@v4
+        with:
+          script: |
+            github.actions.setOutput('ncu_output', fs.readFileSync('ncu_output.txt', 'utf-8'))
+            console.log('${{ steps.ncu_output.outputs.ncu_output }}')
